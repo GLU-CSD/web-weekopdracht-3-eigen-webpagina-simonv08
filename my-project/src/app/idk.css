@@ -1,0 +1,141 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, black, #4b0082);
+  font-family: Arial, sans-serif;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: purple;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: calc(100% - 40px);
+}
+
+.list {
+  flex: 0 0 45%;
+  padding: 20px;
+  overflow: hidden;
+  max-height: 80vh;
+  margin: 0;
+  color: #cc0099;
+  position: relative;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(204, 0, 153, 0.7), 0 0 20px rgba(204, 0, 153, 0.5);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+li div {
+  display: flex;
+  gap: 5px;
+}
+
+li button {
+  background: transparent;
+  color: #cc0099;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+li button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+li button:focus span {
+  border: 2px solid #cc0099;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+li span.done,
+li span.taken {
+  text-decoration: line-through;
+  color: #888;
+  font-weight: bold;
+}
+
+li span {
+  color: #f0f;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #cc0099;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background-color: #cc0099;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px white;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #4b0082;
+  color: #f0f;
+  outline: none;
+  border: none;
+}
+
+#todoInput::placeholder,
+#pillInput::placeholder {
+  color: #f0f;
+}
