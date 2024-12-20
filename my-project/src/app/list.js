@@ -118,7 +118,8 @@ export default function List({ list = [], setList, storageName, title }) {
             draggable
             onDragStart={(e) => handleDragStart(e, index)}
             onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, index)}>
+            onDrop={(e) => handleDrop(e, index)}
+          >
             {editingIndex === index && editingText !== "" ? (
               <input
                 type="text"
@@ -135,7 +136,8 @@ export default function List({ list = [], setList, storageName, title }) {
                   color: item.done ? "#555" : "#f0f",
                   fontWeight: "bold",
                 }}
-                onDoubleClick={() => handleDoubleClick(index)}>
+                onDoubleClick={() => handleDoubleClick(index)}
+              >
                 {item.text}
               </span>
             )}
